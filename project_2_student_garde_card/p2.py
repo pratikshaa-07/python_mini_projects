@@ -98,23 +98,19 @@ def gen_report(inp_file,op_file):
 
         print("Report generated successfully")
 
+with open("students.csv","w") as f:
+        f.write("StudentID,Name,Math,Physics,Chemistry,Biology\n")
+        f.write("S001,Alice Johnson,85,90,88,92\n")
+        f.write("S002,Bob Smith,78,82,75,80\n")
+        f.write("S003,Carol White,92,88,95,90\n")
+        f.write("S004,David Brown,70,68,72,75\n")
 
-if __name__ == "__main__":
-        with open("students.csv","w") as f:
-                f.write("StudentID,Name,Math,Physics,Chemistry,Biology\n")
-                f.write("S001,Alice Johnson,85,90,88,92\n")
-                f.write("S002,Bob Smith,78,82,75,80\n")
-                f.write("S003,Carol White,92,88,95,90\n")
-                f.write("S004,David Brown,70,68,72,75\n")
+gen_report("students.csv","report.txt")
 
-        #report card
-        gen_report("students.csv","report.txt")
-
-        print("-----------students.csv---------- ")
-        with open("students.csv","r") as f:
-                print(f.read())
-
-        print("----------report.txt------------")
-        with open("report.txt","r") as f:
-                print(f.read())
-
+print("------------students.csv---------------")
+with open("students.csv","r") as f:
+        print(f.read())
+                
+print("--------------report.txt---------------")
+with open("report.txt","r") as f:
+        print(f.read())
