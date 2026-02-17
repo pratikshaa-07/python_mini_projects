@@ -58,7 +58,7 @@ def gen_report(inp_file,op_file):
 
         high_chem = max(students, key=lambda s: s.chem)
         low_chem  = min(students, key=lambda s: s.chem)
-
+        
         high_bio = max(students, key=lambda s: s.bio)
         low_bio  = min(students, key=lambda s: s.bio)
 
